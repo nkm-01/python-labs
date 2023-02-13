@@ -9,9 +9,9 @@ import simple_draw as sd
 # Параметры функции: кордината X, координата Y, цвет.
 # Вывести 10 смайликов в произвольных точках экрана.
 
-def draw_smile(a: int | sd.Point, # x or center
-               b: int | tuple[int, int, int], # y or color
-               c: tuple[int, int, int] | None = None): # color if a, b is x, y, else None
+def draw_smile(a, # x or center
+               b, # y or color
+               c = None): # color if a, b is x, y, else None
 	"""
 	draw_smile(center, color) OR draw_smile(center_x, center_y, color)
 	Draws a smile face

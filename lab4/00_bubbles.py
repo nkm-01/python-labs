@@ -6,19 +6,17 @@ import simple_draw as sd
 sd.resolution = (1200, 600)
 
 # Нарисовать пузырек - три вложенных окружностей с шагом 5 пикселей
-def bubble():
-	center = sd.Point()
-	sd.circle(center, 50)
-	sd.circle(center, 45)
-	sd.circle(center, 40)
-bubble()
+center = sd.Point()
+sd.circle(center, 50)
+sd.circle(center, 45)
+sd.circle(center, 40)
 sd.sleep(5)
 
 # Написать функцию рисования пузырька, принммающую 3 (или более) параметра: точка рисования, шаг и цвет
 def draw_bubble(center: sd.Point = sd.Point(),
                 radius: int = 50,
                 step: int = 5,
-                color: (int, int, int) = sd.random_color()) -> None:
+                color: tuple[int, int, int] = sd.random_color()) -> None:
 	sd.circle(center, radius, color)
 	sd.circle(center, radius - step, color)
 	sd.circle(center, radius - step * 2, color)
